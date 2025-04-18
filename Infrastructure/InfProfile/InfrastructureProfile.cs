@@ -34,6 +34,5 @@ public class InfrastructureProfile : Profile
 
         CreateMap<Course, CourseAverageGradeDTO>()
             .ForMember(dest => dest.AverageGrade, opt => opt.MapFrom(src => src.Enrollments.Any() ? src.Enrollments.Average(e => e.Grade) : 0));
-
     }
 }

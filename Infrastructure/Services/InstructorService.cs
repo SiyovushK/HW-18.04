@@ -103,4 +103,20 @@ public class InstructorService(DataContext context, IMapper mapper) : IInstructo
         return new PagedResponse<List<GetInstructorDTO>>(InstructorDtos, pageNumber, pageSize, totalRecords);
     }
 
+    //Task5
+    public async Task<Response<List<InstructorsWithCourseCount>>> InstructorsAndCourseCount()
+    {
+        var instructors = await context.Instructors
+            .Select(i => new InstructorsWithCourseCount
+            {
+                InstructorId = i.InstructorId,
+                FirstName = i.FirstName,
+                LastName = i.LastName,
+                CourseCount = i.courseAssignments.Count(ca => ca.InstructorId == i.InstructorId)
+            })
+            .ToListAsync();
+
+        return new Response<List<InstructorsWithCourseCount>>(instructors);
+    } 
+
 }

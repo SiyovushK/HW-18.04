@@ -72,6 +72,27 @@ public class StudentService(DataContext context, IMapper mapper) : IStudentServi
         return new Response<List<GetStudentDTO>>(getStudentsDto);
     }
 
+    //Task3
+    public async Task<Response<List<StudentsWithCourseCount>>> GetStudentsCourseCount()
+    {
+        var students = await context.Students
+            .Select(s => new StudentsWithCourseCount
+            {
+                StudentId = s.StudentId,
+                FirstName = s.FirstName,
+                LastName = s.LastName,
+                CourseCount = s.Enrollments.Count
+            })
+            .ToListAsync();
+
+        if (students.Count == 0)
+        {
+            return new Response<List<StudentsWithCourseCount>>(HttpStatusCode.NotFound, "No students found");
+        }
+
+        return new Response<List<StudentsWithCourseCount>>(students);
+    }
+
     //Task4
     public async Task<Response<List<GetStudentDTO>>> StudentsWithNoCourses()
     {

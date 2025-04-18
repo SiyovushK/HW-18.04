@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\-\\Desktop\\HW 17.04\\Domain\\Domain.csproj": {}
+    "C:\\Users\\-\\Desktop\\HW 17.04 auto-mapper\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\-\\Desktop\\HW 17.04\\Domain\\Domain.csproj": {
+    "C:\\Users\\-\\Desktop\\HW 17.04 auto-mapper\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\-\\Desktop\\HW 17.04\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\-\\Desktop\\HW 17.04 auto-mapper\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\-\\Desktop\\HW 17.04\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\-\\Desktop\\HW 17.04 auto-mapper\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\-\\Desktop\\HW 17.04\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\-\\Desktop\\HW 17.04 auto-mapper\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\-\\AppData\\Roaming\\NuGet\\NuGet.Config"

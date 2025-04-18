@@ -106,7 +106,7 @@ public class CourseService(DataContext context, IMapper mapper) : ICourseService
         var result = mapper.Map<List<CourseAverageGradeDTO>>(courses);
 
         return new Response<List<CourseAverageGradeDTO>>(result);
-    }
+    } 
 
     public async Task<PagedResponse<List<GetCourseDTO>>> GetAllAsync(CourseFilter filter)
     {
